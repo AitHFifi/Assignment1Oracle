@@ -107,9 +107,15 @@ SELECT First_Name, Last_Name
 FROM Customers
 WHERE Customer_ID IN (SELECT Customer_ID FROM Orders WHERE Total_Amount > 600);
 
--- Grant select and insert permissions to a user
-GRANT SELECT, INSERT ON Products TO user_role;
+-- Start a transaction
+BEGIN;
 
--- Revoke insert permission from a user
-REVOKE INSERT ON Products FROM user_role;
+-- Insert a new product and reduce stock
+INSERT INTO Products (Product_ID, Name, Description, Price, Stock_Quantity, Category_ID)
+VALUES (3, 'Laptop', 'High-performance laptop', 899.99, 50, 1);
 
+-- Commit the transaction
+COMMIT;
+
+-- If something went wrong, roll back the transaction
+ROLLBACK;
