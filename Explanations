@@ -1,0 +1,22 @@
+1. Results from SELECT Queries
+When you run a SELECT command, you are asking the database to show you specific data from one or more tables. Think of it like requesting a report that displays rows of information from a database. The result will show you a table with the data you're looking for, such as a list of customers, their email addresses, or a product inventory.
+For example, if you want to see a list of all the customers, the database will display their names, emails, or any other details you requested. This does not change the database, it's just showing you the current data.
+2. Results from INSERT Commands
+When you use an INSERT command, you are adding new data to the database. Think of it like adding a new entry into a spreadsheet. After the insert, the new data (like a new customer or product) is stored in the database, though you don't get a visual result right away. To see the added data, you would run a SELECT query to view it.
+For example, if you add a new product, it’s now part of the system, and you can later search for or modify it.
+3. Results from UPDATE Commands
+The UPDATE command is used to modify existing data in the database. It's like going into a document and changing a detail, such as correcting someone's email address. After the update, the previous data is replaced with the new data.
+For instance, if you change a customer's phone number in the system, the old phone number is no longer stored. The only data that remains is the updated phone number.
+4. Results from DELETE Commands
+The DELETE command removes data from the database. Think of it like erasing a row from a spreadsheet. Once you delete a record, that data is gone from the system and can't be retrieved unless you had backed it up earlier.
+For example, if you delete a product from the system, it’s as if that product never existed in the records anymore.
+5. Results from JOIN Commands
+A JOIN command is like combining two tables of data to create a more complete report. It links related data from different tables and shows them together in one result.
+For instance, imagine you have two separate tables: one with customer information and one with their order details. A JOIN would bring this information together, allowing you to see both customer details and the orders they've placed in a single view.
+6. Transactions: COMMIT and ROLLBACK
+A transaction is like a series of actions you want to perform on the database, and you want all of them to succeed or fail together. For example, when a customer places an order, you might need to:
+Deduct the product from inventory.
+Create an order record.
+Process the payment.
+If everything works perfectly, you use COMMIT to save these changes permanently. This is like saving a file on your computer after making edits — everything is now final.
+But if something goes wrong (like the payment processing fails), you can use ROLLBACK to undo all of the changes that were made during that transaction. This is like discarding unsaved changes in a document — everything goes back to how it was before you started.
